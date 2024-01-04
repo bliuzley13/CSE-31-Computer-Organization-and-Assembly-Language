@@ -1,0 +1,47 @@
+TPS 1:
+1. They are 0x00400000 and 0x10010000
+2. I believe that their difference is in the complexity of their commands meaning that some of their commands require more steps in True Assembly Language and may mean less due to functions that exist in MIPS Assembly Language.
+3. The difference between the two address locations appears to be 20 bytes.
+4. There are 8 columns excluding the main address location in data segment.
+5. From my understanding, the relationship between the address difference and the number of columns at each address location is the distance in memory between them. The address difference in bytes is 4, and it is that in the number of columns.
+6. It would be set like "m: .word 20"
+7. It is stored in the 0x10010000 address where the value is (+4).
+8. We would use str1: .asciiz "I love CSE31!"
+9. It is stored in addresses where the value is +8, +12, and +16.
+10. It does not appear with how I have expected the values to be. It looks as though the values were mixed around such that it prints the message, but the characters are reversed for every cell.
+11. To print out a value, have a code for the syscall, which is 4, like li $v0, 4 and then la $a0, str with str being that string and print it using syscall.
+12. la $t3, n loads the address of variable into the register of $t3. $t3 will store the memory address where it is stored.
+
+TPS 2:
+1. The limited amount of instructions reduces the complexity and makes it simpler to implement.
+2. Done
+3. Done
+4. Done
+5. Done
+6. Done
+7. Done
+8. Done
+
+PseudoCode:
+Initializes even_sum to 0
+Initializes odd_sum to 0
+
+Loops until user enters 0:
+    Prompts user for number
+    Reads user's input
+
+    Checks if input is 0:
+        If yes, exit the loop
+    Checks if input is even:
+        If yes, add input to even_sum
+    Check if input is odd:
+        If yes, add input to odd_sum
+
+Prints even_sum
+Prints odd_sum
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+We know the following:
+- avg_even is the digits that sum up to an even number
+- avg_odd is the digits that sum up to an odd number
+
+Parameters:
+- 0 terminates any more input code
+- negative numbers are included
+- results have a float result
+
+PseudoCode:
+1. Create the code for the 1st input
+2. Use an array with size 1 to help with writing when there is no average to compute
+3. Create format code to help with the inputs
+4. Use remainders by dividing by 10
+5. Create a copy of the input number
+6. Use that copy to get the sum of the numbers
+7. Use the sum of the numbers to help divide up the numbers into even or odd
+8. Make sure that negative numbers are included in the remainder check when dividing
+9. Create code that terminates further inputs when 0 is entered
+10. Have Global Variables to help with the iterations
+11. Use a for loop with a massive number to help with gathering the inputs until it needs to break
+12. Divide up the result and get it in a float format

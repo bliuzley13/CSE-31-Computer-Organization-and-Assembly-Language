@@ -1,0 +1,18 @@
+TPS 1:
+1-4. Done
+5. Because the program reads an input, there is no need to declare n in the data segment. The code will give an error if it was declaring in the .data segment.
+6. It works
+
+TPS 2:
+1. It works
+2-3. It is in the code
+4. Register $t0
+5. The returned value is in the $v0 register.
+6. In code
+7. Three integer values are reserved. These are $ra, $s0, and $s1. The $ra register is inserted first.
+8-9. In code
+10. $a0 needs to be saved into the stack so we can access this value later on after the first recursive call. 
+11. In code
+12. If recursion is called right away, the returned value from the previous recursion call is overwritten. 
+13-14. In code
+15. The return address is the value that needs to be retrieved so the program can return to the correct location of the code before returning to main.

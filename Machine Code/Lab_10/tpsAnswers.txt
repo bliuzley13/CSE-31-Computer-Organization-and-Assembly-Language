@@ -1,0 +1,42 @@
+TPS 1:
+1. Cache is a high speed storage layer that stores frequently accessed data or instructions for quicker access compared to retrieving them from main memory. We need it to reduce the gap between the fast processor and slower main memory, which enhances the overall system's performance by reducing memory latency.
+2. There are generally 2 practical ways to organize a cache: Direct-mapped cache and N-way set associative
+cache. In both types of cache, data at a specific address of the main memory (RAM) are mapped to a
+pre-defined location in the cache. A “Block” is the basic unit of data being mapped between the main
+memory and cache. The size of a block depends on the specification of a cache. Every time data is
+transferred between cache and the main memory, it is a block of data being transferred. In this
+exercise, we will explore the Direct-mapped cache.
+3. In a Direct-mapped cache, the cache is organized as a hash table. Addresses of the main memory are
+mapped to the indices of the cache (block numbers) using a modulo operator (%) as the hash function.
+As a result, we can divide a memory address into 3 fields: tag, index, offset.
+4. You would need 4 offset bits for a block size cache of 16 bytes. The function is Number of Offset Bits = log of 2 (Block Size). Offset bits tell us how many bytes of data are in a block. These bits are the
+right-most bits of the memory address. You can consider this as the number of columns of data in a cache. With a specific value of the offset bits from an address, we know which column of a block we are trying to access.
+5. We would need 6 index bits for a 64 blocks in a chace. The function is the same as before: Number of Offset Bits = log of 2 (Block Size). The number of index bits required is increased logarithmically with the number of blocks in the cache.
+6. You would know the total block size by multiplying block size and the number of blocks.
+7. We would use the leftover bits from the address after considering the offset and index bits for the tag bits in a cache system employing direct mapping or set-associative mapping. These tag bits are crucial as they faciliate the indentification of which block of memory is stored in a particular cache location. The remaining bits from the memory address after utilizing the offset and index bits are dedicated to the tag. The tah bits allow the cache to determine if the data stored in a specific cache block matches the data being currently requested by the processor. The leftover bits are important as they ensure the correctness and efficiency of the cache operation by allowing proper identifictaion and retrieval of data from the cache.
+8. Given a memory address of 20 bits (during Intel 8086 era), 128B of direct-mapped cache, and 8B
+block size, answer the following questions:
+8a. Main memory size is 2^20 bytes.
+8b. log2(Block size)=log2(8)=3 bits as the number of offset bits.
+8c. Number of blocks is cache size/block size = 128/8 = 16 blocks
+8d. Number of index bits are log2(Number of blocks)=log2(16)=4 bits
+8e. Tag bits = Total address bits - (offset bits + index bits) = 20-(3+4) = 13 bits
+8f. This was drawn.
+8g. The number of bits per row of the cache is bits per row = tag bits + valid bit + dirty bit + data block. It is the sum of all of those.
+
+TPS 2:
+1. The main disadvantage of a direct-mapped cache is the higher likelihood of conflict misses due to the fixed mapping of memory blocks to specific cache locations based on modulo-based indexing. This reduces cache performance and efficiency, particularly with scenarios with high contention for specific cache lines among multiple memory blocks.
+2. To overcome this problem, we can allow multiple blocks of data to occupy the same
+set of a cache. Note that we use “set” here instead of index of cache. In this organization, we group N blocks (rows) of cache into a set and allow more than one block of data to stay within a set. The layout of the cache
+remains the same as its direct-mapped version, but the difference is that every N blocks are now being
+grouped into a set.
+3. We need 8 index bits, and the function is number of index bits = log2(number of blocks/associativity) as there are 1024 block divided by 4 per set which is 256 sets. That is then log2(256).
+4. We are given a memory address of 20 bits, 128 bytes of 2-way cache, 8 bytes of block size. 
+4a. The main memory size is 2^20 bytes.
+4b. There are 3 bits = log2(8) = log2(block size)
+4c. There are 16 blocks = 128/8 = cache size/block size
+4d. There are 8 sets = 16/2 = number of blocks/associativity
+4e. There are 3 index bits = log2(number of sets) = log2(8) = number of index bits
+4f. There are 14 bit = total address bits - (offset bits + index bits) = tag bits
+4g. The layout of the cache was drawn.
+4h. The number of bits per row of the cache is tag bits + valid bit + dirty bit + data block

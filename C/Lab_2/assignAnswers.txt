@@ -1,0 +1,11 @@
+Individual Assignment 1: Segmentation Faults
+1. There was an error with line 22 meaning that the code expected a pointer argument but that the second argument was an integer.
+2. I fixed it when I added the '&' operator in front of the input variable in line 22 similar to line 18.
+
+3. The bug here is with the sum variables in both the main and read_values functions. For the main function, the '&' gets the memory address, and the '*' accesses the value which is stored at the memory address pointed by the pointer.
+4. You fix it by placing the '&' in front of the sum variable which is in the read_files function. And in the read_values function, you add a '*' in front of every sum variable in that function.
+
+Individual Assignment 2: Fix appendTest.c
+1. This output is expected.
+2. This output is not expected, because the append string does not reset. And the bug is in line 17 with the for loop. When changing s2len to "s2len + 1", it removes the \0, which is the punctuation. That fixes the issue.
+3. This output is not expected, because there is a character limit which would not append everything in the limit which is 10 in the array.

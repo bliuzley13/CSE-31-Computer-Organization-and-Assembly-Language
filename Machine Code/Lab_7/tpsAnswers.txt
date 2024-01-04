@@ -1,0 +1,21 @@
+TPS 1:
+1. A function returns a value, but a procedure does not. A method is similar to a function but it is part of a class.
+2. As we have learned in lectures, our compiled program is stored in the static part of the memory when it is being executed. When the CPU runs a program, it executes the statements according to the statement order (line numbers). Unless there is a branch (beq/bne) or jump (j/jal) statement, it will just execute the next statement.
+3. The program is written.
+4. It is in line 20, where it sums up the variables.
+5. We can not use j. It must use jr $ra to jump back to the address in the return address. $ra.
+6. The return address is supposed to be saved at line 'addi $ra, $zero, 0'. It is saved in the $ra register. The value here is 0. It does not make sense. 
+7. The error occurs due to an invalid return address. The program counter points to an incorrect memory location which causes expected behavior or terminates the program. The program counter tells the CPU where to look for a statement.
+8. The address is 'jal SUM'
+9. jal SUM instead of j SUM saves the correct retuen address in the $ra register before jumping to the 'SUM' function. It assembles the code and inspects the Text Segment in that the return address is set to the correct address, which is the location of the instruction immediately following the 'jal SUM' statement.
+10. The new return address is the address of the instruction immediately following the 'jal SUM' instruction. After this modification, assembling the code, running the program, the output will be the sum of m and n.
+11. Instead of j, we use jal since it also saves the return address in the $ra register.
+12. The code was modified j to jal SUM
+
+TPS 2:
+1. The output will be 40 here. But it gives an output of 38.
+2. The Main function in MIPS works like the main in c, but mips loads values from memory, prepares for the call to SUM and then prints the result. It loads the values of x and y into registers $s0 and $s1 respectively. The SUM function is called and it calls teh result of SUM to y which then prints the result. The main function in MIPS assembly is a direct translation of the main function in C, carrying out the same operations.
+3. I would solve this problem using the jal and using jr which contains the address of the instruction following the 'jal SUB' in 'SUM'. 
+4. This could be handled if we were to save the original value of $a0 which contains n into a temporary register like $t0 before modifying that to pass towards SUB. After doing that, we could restore the original value of $a0 from $t0. This makes sure that the input argument of SUM remains unchanged across the function call to SUB.
+5. The original value in $s0 from MAIN is overwritten with the result of 'SUM'. This can be a problem and to fix this, the original value of $s0 onto the stack must be saved.
+6. The Prologue and Epilogue code is inserted and works as expected.

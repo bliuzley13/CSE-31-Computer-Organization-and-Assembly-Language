@@ -1,0 +1,22 @@
+TPS 1:
+1. I expected the program to print out '2', and for it to print out something in hex format. It appears to print something like DCBA but that it is in 44434241 instead of the 1234 I expect it to print.
+2. I expect it to print what it did before especially if it does not change anything in that line.
+3. I see that the program did not change as I had expected it to.
+4. It printed out the exact same thing as before. I am quite lost by the result that was intended.
+5a. I believe that there is 1 array allocated in the program.
+5b. I think four_ints and four_c are pointing to the same location as a guess.
+5c. They both output 0x7ffc1edd3dd0, so they are pointing to the same location.
+6. The difference in addresses between two consecutive elements here is 4. It means that each element of the array "four_ints" is located about 4 bytes apart. It is because an int has 4 bytes occupied in memory.
+7. I drew the layout of the array horizontally.
+8. This difference here is in 1 byte. It is because four_c is an array of characters and each occupy a byte of memory.
+9. I drew the similar structure for four_c.
+10. C accesses memory by moving to the next location in terms of the size of the data type. 4 for int and 1 for char for instance. 
+
+TPS 2:
+1. Line #8 allocates memory for an array of 'n' integer pointers.
+2. We access the ith row of the array with arr[i]
+3. We wrote the code when allocating all the rows and initializing all contents to be 0.
+4. We need to pass the size as an argument because C doesn't know the dimensions of the array passed to a function. This size for the array isnt stored within the array itself and must be explicitly passed to the function so it knows how many elements it should print.
+5. The code was written to print out the content and layout of an array correctly.
+6. The code was inserted.
+7. I have the code such that the first array is all 0's and the second array is implemented in number six.

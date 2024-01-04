@@ -1,0 +1,22 @@
+TPS 1:
+1. MARS stands for "MIPS Assembly Language Programming"
+2. The jar file runs
+3. The files were downloaded
+4. The files were downloaded
+5a. You load the file by opening file in file explorer in windows or pressing Ctrl-O after opening file in mars.
+5b. You compile the program by pressing f3 or by opening run and pressing assemble
+5c. You press f5 when opening up run after it compiled.
+5d. You cannot run the program before assembling it
+5e. You press f7, which means step that is available after compiling the code which is available when opening run
+5f. You press reset in run, then hit go in run again.
+6. I opened up myFirstExample.s, understood its code, and ran it while resetting it to re run the code.
+
+TPS 2:
+1. The .data declares initialized data, .word reserves space in memory and initializes it with a specific value, and .text has the actual MIPS assembly instructions.
+2. line 10 is a label, which is another section with its own instructions
+3. line 15 is an unconditional jump which goes back to the label of fib.
+4. You go to the execute part which is next to edit, then look for line 15 and click on the box which is under Bkpt.
+5. You can continue to execute your code when pressing step in run. But pressing go would only restart the program.
+6. You can look over on the right of the program, and then click on a register by pressing on its value then you can change it to values that are numeric. Otherwise, it would not work. 
+7. n is stored in $t3, and we calculated the 13th fib number, it returns 233
+8. syscall is an instruction which is a system call to the operating system. It requests a service from the operating system, with line 19, it asks to print the result, and with line 21, it asks to exit the program. We know this because they have codes, which are and 1 and 10 respectively for the function described in the program.

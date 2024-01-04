@@ -1,0 +1,51 @@
+TPS 1
+1. Arvind K., Kyle S., Surabhi R.
+2. Watched the Video
+3. Shared the tutorials
+4. Bookmarked the results in my browser
+
+TPS 2
+1. I can open the terminal by hitting the windows key
+on my windows laptop and typing either powershell or
+terminal and hitting enter to open the terminal
+1a. I can open more than 1 terminal at the same time
+1b. I believe that is to help with keeping certain files
+open at a given time in order to help with working with
+multiple files at the same time. 
+2. We can use 'ls' to show the list of everything that is
+inside a folder.
+3. We could open up the file explorer on windows and navigate
+manually to the desktop if we do not know how to access
+the desktop through the terminal. We could use the file explorer
+and right click on a folder to copy its path. And then we 
+would do a "cd" in the terminal and paste the path right after
+the cd command. That would automatically change the directory
+to the intended desktop location.
+4. We could create the directory using "mkdir", which would
+create the folder. In this case, it would be "mkdir CSE31"
+
+TPS 3
+1. Found the two resources
+2. Shared and saved the two bookmarks in my browser.
+3. I installed both the windows and linux version on my laptop. Git
+Bash uses linux and Powershell is windows. These commands are
+"gcc -o a.exe main.c" & "gcc -o a main.c" respectively in which "a" being 
+the executable and "main.c" which is being compiled that is relevant to 
+the main.c file that made in this lab.
+4. I will know if my program has compiled successfully by seeing that
+the terminal asks for another command and that there is no text that
+depicts an error of any sort.
+5. The -c flag in gcc lets me compile multiple files. There is no need
+for linking it to an executable, and it will generate an object file
+for each source file.
+6. The -g flag in gcc lets me include debugging information in the 
+executable I get from compiling some code which can be helpful when
+stepping through some code.
+7. To have a new executable name, you could simply just write 
+"gcc -o cselab1 main.c"
+8. Only writing "gcc main.c" will give me a default executable such as
+a.exe on Windows,  meaning that the command will still compile but it
+will give a default named executable.
+9. To run my program on Powershell, I used the command "./a.exe" and "./a"
+to try out different ways of running a compiled command. I just used the
+"gcc main.c" to compile my code.

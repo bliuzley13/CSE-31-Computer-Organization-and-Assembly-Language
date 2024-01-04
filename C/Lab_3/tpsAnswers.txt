@@ -1,0 +1,19 @@
+TPS activity 1:
+1. These pools are memory are: Static storage: global and static variables that are permanent, The Stack: local variable storage, parameters, return address, and The Heap: data lives until deallocated by programmer
+2. Opened mem.c 
+a. There are 3 variables declared.
+b. There are 2 pointers. They point to integers.
+c. They are stored in The Stack, which is local variable storage
+d. The pointer ptr will point to the The Heap, which is data that will then be deallocated
+3. I drew the 3 pools of memory and indicated the locations of the variables that are labeled and has the addresses of these variables.
+4. I drew the arrows to connect each pointer
+
+TPS activity 2:
+1. This program has a Node struct that can have different variable types that are input. But with the *head, we have it going through a process such that every time head is used like head->, we have it accepting a value that can be either an integer or a float. 
+2. The code was inserted to print out the value of head and the addresses of head, iValue, fValue, and next pointed by head.
+3. Based on the structures of the members of Node structure, I observed that structures are stored in memory such that they are different based on the data type. So when head was created, it is a pointer which has a value that looks like an address. As for head, it has an address that differs from iValue and fValue since iValue and fValue are located in a location that is next to each other. Head has an address, and iValue and fValue have values which are located in head, which represents their proximity being that int has 4 values in it. Additionally, the address of next pointed by head is nil since there is no value that next can be when it is pointed to by head. In other words, next does not have a value that represents it, but that it goes on to the next location which has nothing in it unless it had something added to it.
+
+Individual Assignment 1: 
+1a. We need to pass the size of the array to the function so that it can have a copy of the array with the same exact size.
+1b. The original array is not being changed at the end of this function.
+1c. The array is not updated, because it will print out the original array in the program when it is being run.

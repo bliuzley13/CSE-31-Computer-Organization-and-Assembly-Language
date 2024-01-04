@@ -1,0 +1,26 @@
+TPS 1:
+1. Arvind Kumar
+2. 3 Online tutorials were searched
+3. Shared the tutorials
+4. Bookmarked results
+
+TPS 2:
+1. You would compile it with "gcc -g -o punishment punishment.c"
+2. you would load as "gdb ./punishment"
+3. You would print "run" to run the punishment code
+4. Breakpoints are a spot in the program where I would like to stop execution to see where the program is crashing. It would be similar to "break main.c:1" after the (gdb) prompt. You would set a break point after when it says (gdb) as "break main.c:39" in my case.
+5. You would use "next" so in this case, it would be "next 3" or you could type in next 3 times.
+6. It could be done as something like "print something" with something being the variable. I did i, which looked at repetitions in terms of iterating through, repCount as number of repetitions, and typoIndex as the line where to place the intended print statement.
+7. You would print "continue" to run the rest of the code
+8. You would exit out of gdb by typing "quit"
+
+TPS 3:
+1. There are 4 variables, and there are 2 pointers. x and y are integers, and px and py are pointers to integers (int*).
+2. This program only gave me random values, and I think it is because c just gets a value from the location something is stored in.
+3. This can be prevented if you were to set the variables to something like x = 1, y = 1, and arr[10] = {25}. The values needs to be initialized before to make them run.
+4. The printf statements were inserted to display the addresses of x and y.
+5. The code that points px to x and py to y with its values and addresses are printed out as well. The value of px and address of x is the same as for its py and y counterparts.
+6. We have a loop that outputs the contents of arr as a pointer that is written.
+7. Array names are the same as pointers at the first element. After this, pointers can keep have more data added to it, but arrays are fixed in size. Pointers can change their pointing to different locations when arrays can not reassign to point to a different memory location.
+8. The result does make sense because they both start at the front of the array which is the same memory location. They start at the same place and the name of an array decays into a pointer within its first element.
+

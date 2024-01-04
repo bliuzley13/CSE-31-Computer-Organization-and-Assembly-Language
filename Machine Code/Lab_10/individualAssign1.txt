@@ -1,0 +1,5 @@
+1. There are 3 levels of cache on my cpu. There is a separate L1 cache for data and instructions.
+2. Each level of cache is: L1 Data: 6x48KB+8x32KB, L1 Inst. 6x32KB+8x64KB, L2 6x1.25MB+2x2MB, L3 24MB.
+3. The block size is 64 bytes.
+4. The caches are set associative. L1 may have 8 or more way associativity, and L2 and L3 may have 16-way or 24-way associativity.
+5. There are 6 Offset bits, log2(425) index bits, and 64-(6+log2(425)) tag bits.
